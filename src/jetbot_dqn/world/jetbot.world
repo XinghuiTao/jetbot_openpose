@@ -10,7 +10,7 @@
     <!-- include jetbot sdf model under .gazebo/models -->
     <include>
       <uri>model://jetbot</uri>
-      <pose>0 0 0 0 0 90</pose>
+      <pose>0 0 0 0 0 0</pose>
     </include>
   </world>
 </sdf>
