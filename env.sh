@@ -6,4 +6,4 @@ sudo apt-get install ros-melodic-ros-control ros-melodic-ros-controllers ros-mel
 pip2 install imageio==2.6.1
 pip2 install tensorflow-gpu==1.14.0 keras==2.3.1
 pip2 install cvlib --no-deps
-pip2 install requests progressbar imutils  opencv-python
+pip2 install requests progressbar imutils opencv-python
