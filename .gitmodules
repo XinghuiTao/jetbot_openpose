@@ -1,3 +1,0 @@
-[submodule "src/jetbot_gazebo"]
-	path = src/jetbot_gazebo
-	url = https://github.com/kimbring2/jetbot_gazebo.git
