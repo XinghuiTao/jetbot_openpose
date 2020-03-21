@@ -3,6 +3,7 @@ import rospy
 from std_msgs.msg import Float64, Float64MultiArray
 import time
 
+
 class MoveRobotStopOnShutdown(object):
     def __init__(self):
         self.pub_vel_left = rospy.Publisher('/robot/joint1_velocity_controller/command', Float64, queue_size=1)
