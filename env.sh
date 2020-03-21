@@ -1,5 +1,6 @@
 #!/bin/bash
-
+sudo apt-get update
+sudo apt-get upgrade -y
 sudo apt-get install python-pip 
 sudo apt-get install ros-melodic-ros-control ros-melodic-ros-controllers ros-melodic-joint-state-publisher-gui ros-melodic-teleop-twist-keyboard -y
 

@@ -10,7 +10,7 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Image
 
 
-class Detecter(object):
+class Detect(object):
     def __init__(self):
         self.bridge_object = CvBridge()
         self.image_sub = rospy.Subscriber("/robot/camera1/image_raw",Image,self.camera_callback)
@@ -26,8 +26,9 @@ class Detecter(object):
 
 
 def main():
-    detecter = Detecter()
-    rospy.init_node('detecter', anonymous=True)
+    rospy.init_node('detect_node', anonymous=True)
+    detect = Detect()
+    
     try:
         rospy.spin()
     except KeyboardInterrupt:

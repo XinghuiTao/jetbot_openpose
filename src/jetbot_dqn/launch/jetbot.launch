@@ -8,5 +8,5 @@
 
     <include file="$(find jetbot_dqn)/launch/spawn.launch"/>
 
-    <node pkg="jetbot_dqn" type="detecter.py" name="detecter" output="screen" />
+    <node pkg="jetbot_dqn" type="detect.py" name="detect" output="screen" />
 </launch>
