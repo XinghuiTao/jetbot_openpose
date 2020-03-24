@@ -13,9 +13,9 @@ sudo pip3 install virtualenv
 # Set up py3venv within Workspace
 cd ~/Workspace
 mkdir -p py3venv/src
-cd py3venv
+cd ~/Workspace/py3venv
 virtualenv py3 --python=python3
-source python3/bin/activate
+source ~/Workspace/py3venv/py3/bin/activate
 
 pip3 install pyaml rospkg empy
 
@@ -30,4 +30,4 @@ cd ..
 
 # Catkin make
 catkin_make -DPYTHON_EXECUTABLE:FILEPATH=~/Workspace/py3venv/py3/bin/python
-source devel/setup.bash
+source ~/Workspace/py3venv/devel/setup.bash
