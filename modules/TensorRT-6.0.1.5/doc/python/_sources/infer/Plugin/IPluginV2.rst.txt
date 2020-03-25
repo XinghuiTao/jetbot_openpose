@@ -1,6 +1,0 @@
-=========
-IPluginV2
-=========
-
-.. autoclass:: tensorrt.IPluginV2
-    :members:

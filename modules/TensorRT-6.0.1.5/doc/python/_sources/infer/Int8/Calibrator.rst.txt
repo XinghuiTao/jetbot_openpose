@@ -1,9 +1,0 @@
-===============
-IInt8Calibrator
-===============
-
-.. autodata:: tensorrt.CalibrationAlgoType
-    :annotation:
-
-.. autoclass:: tensorrt.IInt8Calibrator
-    :members:

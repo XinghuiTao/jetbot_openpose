@@ -1,9 +1,0 @@
-=======
-Weights
-=======
-
-.. autodata:: tensorrt.WeightsRole
-    :annotation:
-
-.. autoclass:: tensorrt.Weights
-    :members:

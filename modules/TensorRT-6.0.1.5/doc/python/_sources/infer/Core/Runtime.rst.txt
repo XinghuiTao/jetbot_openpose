@@ -1,6 +1,0 @@
-=======
-Runtime
-=======
-.. autoclass:: tensorrt.Runtime
-    :members:
-    :special-members:

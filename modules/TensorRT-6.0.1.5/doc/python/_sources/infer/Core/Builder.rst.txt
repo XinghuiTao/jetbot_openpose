@@ -1,6 +1,0 @@
-=======
-Builder
-=======
-.. autoclass:: tensorrt.Builder
-    :members:
-    :special-members:

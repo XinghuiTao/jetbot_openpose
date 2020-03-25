@@ -1,6 +1,0 @@
-=============
-DimensionType
-=============
-
-.. autodata:: tensorrt.DimensionType
-    :annotation:

@@ -1,6 +1,0 @@
-=================
-IExecutionContext
-=================
-.. autoclass:: tensorrt.IExecutionContext
-    :members:
-    :special-members:

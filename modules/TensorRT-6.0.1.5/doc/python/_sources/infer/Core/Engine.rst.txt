@@ -1,6 +1,0 @@
-===========
-ICudaEngine
-===========
-.. autoclass:: tensorrt.ICudaEngine
-    :members:
-    :special-members:

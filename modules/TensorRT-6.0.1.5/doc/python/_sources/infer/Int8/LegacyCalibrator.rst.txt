@@ -1,6 +1,0 @@
-=====================
-IInt8LegacyCalibrator
-=====================
-
-.. autoclass:: tensorrt.IInt8LegacyCalibrator
-    :members:

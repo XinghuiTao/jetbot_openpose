@@ -1,9 +1,0 @@
-==============
-IBuilderConfig
-==============
-.. autodata:: tensorrt.BuilderFlag
-    :annotation:
-
-.. autoclass:: tensorrt.IBuilderConfig
-    :members:
-    :special-members:

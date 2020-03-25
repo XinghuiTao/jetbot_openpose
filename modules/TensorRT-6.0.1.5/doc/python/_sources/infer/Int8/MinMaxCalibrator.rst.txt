@@ -1,6 +1,0 @@
-=======================
-IInt8MinMaxCalibrator
-=======================
-
-.. autoclass:: tensorrt.IInt8MinMaxCalibrator
-    :members:
