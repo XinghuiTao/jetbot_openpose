@@ -114,7 +114,7 @@ cd jetcam
 cd ..
 
 tar xzvf ~/Installers/TensorRT-6.0.1.5.Ubuntu-18.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz
-echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Workspace/jetbot_dqn/src/modules/TensorRT-6.0.1.5/lib' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/Workspace/jetbot_dqn/modules/TensorRT-6.0.1.5/lib' >> ~/.bashrc
 source ~/.bashrc
 
 cd ../TensorRT--6.0.1.5/python
