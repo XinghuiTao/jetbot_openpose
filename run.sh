@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source ~/Workspace/py3venv/py3/bin/activate
+source ~/.virtualenvs/py3venv/bin/activate
 source devel/setup.bash
 roslaunch jetbot_dqn jetbot.launch
