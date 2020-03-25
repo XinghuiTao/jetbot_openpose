@@ -84,22 +84,51 @@ ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.cpython-36m-x86_
 
 # (Optional) for testing
 python -c "import cv2; print(cv2.__version__)"
-pip3 install cvlib
+pip install cvlib
 
 # Install catkin
 sudo apt-get install python-catkin-tools python3-dev python3-numpy python3-empy
 # (Optional) for https://github.com/wg-perception/people.git
 sudo apt-get install ros-melodic-easy-markers ros-melodic-kalman-filter ros-melodic-bfl
 # (Optional) for ignisbot
-pip3 install pyaml rospkg empy
+pip uninstall em
+pip uninstall Pillow -y
+pip install --upgrade cython
+pip install pyaml rospkg empy torch torchvision tqdm pycocotools matplotlib Pillow==6.2.2 gpustat
+
+mkdir modules
+cd modules
+git clone https://github.com/NVIDIA-AI-IOT/torch2trt
+cd torch2trt
+~/.virtualenvs/py3venv/bin/python setup.py install
+cd ..
+
+git clone https://github.com/NVIDIA-AI-IOT/trt_pose
+cd trt_pose
+~/.virtualenvs/py3venv/bin/python setup.py install
+cd ..
+
+git clone https://github.com/NVIDIA-AI-IOT/jetcam
+cd jetcam
+~/.virtualenvs/py3venv/bin/python setup.py install
+cd ..
+
+tar xzvf ~/Installers/TensorRT-6.0.1.5.Ubuntu-18.04.x86_64-gnu.cuda-10.0.cudnn7.6.tar.gz
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Workspace/jetbot_dqn/src/modules/TensorRT-6.0.1.5/lib' >> ~/.bashrc
+source ~/.bashrc
+
+cd ../TensorRT--6.0.1.5/python
+pip install tensorrt-6.0.1.5-cp36-none-linux_x86_64.whl
+cd ../cd uff/
+pip2 install uff-0.6.5-py2.py3-none-any.whl
 
 # (Optional) Install baselines for reinforcement learning
-pip3 install tensorflow==1.15rc2
+pip install tensorflow==1.15rc2
 cd src
 git clone https://github.com/openai/baselines.git
 cd baselines
-pip3 install -e .
-pip3 install gym
+pip install -e .
+pip install gym
 cd ..
 
 catkin_make -DPYTHON_EXECUTABLE:FILEPATH=~/.virtualenvs/py3venv/bin/python
