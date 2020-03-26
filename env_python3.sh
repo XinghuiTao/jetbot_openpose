@@ -5,7 +5,7 @@ sudo apt-get upgrade -y
 
 # # Install CUDA v10 and CUDNN v7.6.4
 sudo apt-get install gcc-6 g++-6
-sudo apt-get install build-essential cmake unzip pkg-config libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk-3-dev libatlas-base-dev gfortran -y
+sudo apt-get install build-essential cmake unzip pkg-config libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk-3-dev libatlas-base-dev gfortran libcanberra-gtk-module libcanberra-gtk3-module -y
 
 cd ~
 mkdir Installers
@@ -41,7 +41,7 @@ source ~/.bashrc
 
 mkvirtualenv py3venv -p python3
 workon py3venv
-sudo pip3 install numpy
+sudo pip3 install numpy defusedxml
 
 # Install OpenCV
 cd ~/Installers/
@@ -88,8 +88,10 @@ pip install cvlib
 
 # Install catkin
 sudo apt-get install python-catkin-tools python3-dev python3-numpy python3-empy
+
 # (Optional) for https://github.com/wg-perception/people.git
-sudo apt-get install ros-melodic-easy-markers ros-melodic-kalman-filter ros-melodic-bfl
+sudo apt-get install ros-melodic-easy-markers ros-melodic-kalman-filter ros-melodic-bfl 
+
 # (Optional) for ignisbot
 pip uninstall em
 pip uninstall Pillow -y

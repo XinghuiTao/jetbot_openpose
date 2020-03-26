@@ -1,13 +1,16 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-import roslib
-import sys
-import rospy
 import cv2
-import numpy as np
 from cv_bridge import CvBridge, CvBridgeError
+import cvlib as cv
+from cvlib.object_detection import draw_bbox
+import numpy as np
+import sys
+
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Image
+import roslib
+import rospy
 
 
 class Detect(object):
@@ -21,7 +24,9 @@ class Detect(object):
         except CvBridgeError as e:
             print(e)
 
-        cv2.imshow("Image window", cv_image)
+        bbox, label, conf = cv.detect_common_objects(cv_image, enable_gpu=True, confidence=0.7, model='yolov3-tiny')
+        bbox_image = draw_bbox(cv_image, bbox, label, conf, write_conf=False)
+        cv2.imshow("Image window", bbox_image)
         cv2.waitKey(1)
 
 
