@@ -1,9 +1,8 @@
-# Jetbot DQN model in ROS
+# Jetbot OpenPose model in ROS
 
 ## To-do
 1. Add Jetbot Gazebo package;
-2. Add DL;
-3. Add DQL;
+2. Add OpenPose;
 
 ## Env
 1. Run ./env.sh
